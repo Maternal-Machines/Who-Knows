@@ -7,9 +7,9 @@ import RPi.GPIO as GPIO
 import fnmatch
 
 # === CONFIGURATION ===
-IMAGE_FOLDER = "/home/mm/whoknows/facts"
-DISPLAY_WIDTH = 1024
-DISPLAY_HEIGHT = 600
+IMAGE_FOLDER = "/home/mm/whoknows/facts" # images change depending on device (rectangular / circular / losange)
+DISPLAY_WIDTH = 1024 # change depending on display used
+DISPLAY_HEIGHT = 600 # change depending on display used
 POLL_INTERVAL = 200  # milliseconds
 RANDOM_CHANGE_INTERVAL = 10 * 1000  # 10 seconds
 
@@ -155,4 +155,5 @@ else:
     show_next_image()
 
 root.after(POLL_INTERVAL, poll_switch)
+
 root.mainloop()
